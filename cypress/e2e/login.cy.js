@@ -34,8 +34,6 @@ describe('Funcionalidade Login',() => {
             cy.get('.woocommerce-form > .button').click()
 
             cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain','Olá, aluno_ebac')
-
-
         })
 
     });

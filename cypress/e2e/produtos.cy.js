@@ -22,4 +22,18 @@ describe("Funcionalidade página de produtos.", () => {
     cy.get(".woocommerce-message").should('contain', + quantidade +' × “Abominable Hoodie” foram adicionados no seu carrinho.	');
   
   });
+
+  it("Deve colocar um produto no carrinho - Usando Comando customizado", () => {
+    cy.addProdutos('Aether Gym Pant', 33, "Blue",3)
+  });
+
+  it("Deve colocar um produto no carrinho - Usando Comando customizado", () => {
+    cy.addProdutos('Atlas Fitness Tank', 'M', "Blue", 5)
+  });
+
+  it("Deve colocar um produto no carrinho - Usando Comando customizado", () => {
+    cy.addProdutos('Ariel Roll Sleeve Sweatshirt', 'XL', "Green", 2)
+  });
+
+  
 });
