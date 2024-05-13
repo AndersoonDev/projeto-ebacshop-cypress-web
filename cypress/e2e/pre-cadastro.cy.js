@@ -12,12 +12,18 @@ describe("Funcionalidade Pre Cadastro",() => {
     let senhaFaker = faker.internet.password()
     let emailFaker = faker.internet.email()
 
+    // it.only('Deve completar o Cadastro com sucesso',() => {
+    //     cy.get('#reg_email').type('andersonsilva@teste.com')
+    //     cy.get("#reg_password").type('teste@teste.com');
+    //     cy.get(":nth-child(4) > .button").click();
+    // })
+
     it("Deve completar o pré-cadastro com sucesso",() => {
 
         cy.get("#reg_email").type(faker.internet.email());
         cy.get("#reg_password").type(faker.internet.password());
         cy.get(":nth-child(4) > .button").click();
-        cy.wait(100);
+        cy.wait(500);
         cy.get(".woocommerce-MyAccount-navigation-link--edit-account > a").click();
         cy.get("#account_first_name").type(faker.person.firstName());
         cy.get("#account_last_name").type(faker.person.lastName());

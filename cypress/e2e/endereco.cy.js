@@ -17,7 +17,7 @@ describe('Funcionalidade Endereços - Faturamento e Entrega',() => {
         cy.get('.woocommerce-message').should('contain', 'Endereço alterado com sucesso.')
     });
 
-    it('Deve fazer cadastro de faturamento com sucesso - usando arquivo de dados',() => {
+    it.only('Deve fazer cadastro de faturamento com sucesso - usando arquivo de dados',() => {
         enderecoPage.editarEnderecoFaturamento(
             dadosEndereco[1].nome,
             dadosEndereco[1].sobrenome,
@@ -34,7 +34,7 @@ describe('Funcionalidade Endereços - Faturamento e Entrega',() => {
         cy.get('.woocommerce-message').should('contain', 'Endereço alterado com sucesso.')
     });
 
-    it.only('Deve fazer cadastro de endereço de entrega com sucesso - usando arquivo de dados',() => {
+    it('Deve fazer cadastro de endereço de entrega com sucesso - usando arquivo de dados',() => {
         enderecoPage.editarEnderecoEntrega(
             dadosEndereco[2].nome,
             dadosEndereco[2].sobrenome,

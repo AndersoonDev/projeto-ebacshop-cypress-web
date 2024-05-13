@@ -7,7 +7,7 @@ describe('Funcionalidade Login',() => {
 
     beforeEach(() => {
         cy.visit('minha-conta')
-    });
+});
 
 
     it('Deve fazer login com sucesso',() => {
@@ -16,6 +16,7 @@ describe('Funcionalidade Login',() => {
         cy.get('.woocommerce-form > .button').click()
 
         cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain','Olá, andersonsilva')
+        cy.screenshot('Login com sucesso')
 
     })
 
@@ -25,6 +26,7 @@ describe('Funcionalidade Login',() => {
         cy.get('.woocommerce-form > .button').click()
 
         cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain','Olá, andersonsilva')
+        
     })
 
     it('Deve fazer login com sucesso - Usando fixture',() => {
