@@ -17,7 +17,7 @@ describe("Funcionalidade Pre Cadastro",() => {
         cy.get("#reg_email").type(faker.internet.email());
         cy.get("#reg_password").type(faker.internet.password());
         cy.get(":nth-child(4) > .button").click();
-        cy.wait(100);
+        cy.wait(500);
         cy.get(".woocommerce-MyAccount-navigation-link--edit-account > a").click();
         cy.get("#account_first_name").type(faker.person.firstName());
         cy.get("#account_last_name").type(faker.person.lastName());
@@ -34,7 +34,7 @@ describe("Funcionalidade Pre Cadastro",() => {
         cy.get("#reg_email").type(faker.internet.email());
         cy.get("#reg_password").type(faker.internet.password());
         cy.get(":nth-child(4) > .button").click();
-        cy.wait(100);
+        cy.wait(500);
         cy.get(".woocommerce-MyAccount-navigation-link--edit-account > a").click();
         cy.get("#account_first_name").type(faker.person.firstName());
         cy.get(".woocommerce-Button").click();
@@ -45,7 +45,7 @@ describe("Funcionalidade Pre Cadastro",() => {
         cy.get("#reg_email").type(faker.internet.email());
         cy.get("#reg_password").type(faker.internet.password());
         cy.get(":nth-child(4) > .button").click();
-        cy.wait(100);
+        cy.wait(500);
         cy.get(".woocommerce-MyAccount-navigation-link--edit-account > a").click();
         cy.get("#account_last_name").type(faker.person.lastName());
         cy.get(".woocommerce-Button").click();
@@ -56,7 +56,7 @@ describe("Funcionalidade Pre Cadastro",() => {
         cy.get("#reg_email").type(faker.internet.email());
         cy.get("#reg_password").type(faker.internet.password());
         cy.get(":nth-child(4) > .button").click();
-        cy.wait(100);
+        cy.wait(500);
         cy.get(".woocommerce-MyAccount-navigation-link--edit-account > a").click();
         cy.get(".woocommerce-Button").click();
         cy.get(".woocommerce-error").should("contain", "Nome é um campo obrigatório.");
