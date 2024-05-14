@@ -1,21 +1,10 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
-  projectId: 'k2uyor',
-  reporter: 'cypress-mochawesome-reporter',
-  reporterOptions: {
-    charts: true,
-    reportPageTitle: 'Relatório de teste',
-    embeddedScreenshots: true,
-    inlineAssets: true,
-    saveAllAttempts: false,
-  },
-  
-  e2e: {
-    reporter: 'cypress-mochawesome-reporter',
+  projectId: 'k2uyor',  
+  e2e: {  
     baseUrl: "http://lojaebac.ebaconline.art.br",
-    setupNodeEvents(on, config) {
-      require('cypress-mochawesome-reporter/plugin')(on);
+    setupNodeEvents(on, config) {    
 
       // implement node event listeners here
     },
