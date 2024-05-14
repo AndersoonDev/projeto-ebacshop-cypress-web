@@ -256,7 +256,9 @@
     "mocha": "^10.4.0"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "cy:run": "cypress run",
+    "cy:open": "cypress open"
   },
   "keywords": [],
   "author": "",
