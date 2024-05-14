@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "cy:run": "npx cupress run",
+    "cy:open": "npx cupress open"
+  },
   "keywords": [],
   "author": "Anderson Silva",
   "license": "ISC",

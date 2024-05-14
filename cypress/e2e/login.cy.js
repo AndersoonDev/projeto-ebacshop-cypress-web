@@ -11,11 +11,11 @@ describe('Funcionalidade Login',() => {
 
 
     it('Deve fazer login com sucesso',() => {
-        cy.get('#username').type('andersonsilva@teste.com')
+        cy.get('#username').type('aluno_ebac@teste.com')
         cy.get('#password').type('teste@teste.com',{log: false})
         cy.get('.woocommerce-form > .button').click()
 
-        cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain','Olá, andersonsilva')
+        cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain','Olá, aluno_ebac')
         cy.screenshot('Login com sucesso')
 
     })
@@ -25,7 +25,7 @@ describe('Funcionalidade Login',() => {
         cy.get('#password').type(perfil.senha,{log: false})
         cy.get('.woocommerce-form > .button').click()
 
-        cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain','Olá, andersonsilva')
+        cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain','Olá, aluno_ebac')
         
     })
 
@@ -35,7 +35,7 @@ describe('Funcionalidade Login',() => {
             cy.get('#password').type(dados.senha,{log: false})
             cy.get('.woocommerce-form > .button').click()
 
-            cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain','Olá, andersonsilva')
+            cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain','Olá, aluno_ebac')
         })
 
     });
@@ -49,11 +49,11 @@ describe('Funcionalidade Login',() => {
     })
 
     it('Deve exibir uma mensagem de erro ao inserir senha inválida',() => {
-        cy.get('#username').type("andersonsilva@teste.com")
+        cy.get('#username').type('aluno_ebac@teste.com')
         cy.get('#password').type('00000000000',{log: false})
         cy.get('.woocommerce-form > .button').click()
 
-        cy.get('.woocommerce-error').should('contain','Erro: A senha fornecida para o e-mail andersonsilva@teste.com está incorreta. Perdeu a senha?')
+        cy.get('.woocommerce-error').should('contain','Erro: A senha fornecida para o e-mail aluno_ebac@teste.com está incorreta. Perdeu a senha?')
     })
 
 
