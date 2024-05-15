@@ -2,10 +2,20 @@ pipeline {
   agent any
 
   stages {
-    stage('Inicial') {
+    stage('Clonar Rep') {
       steps {
-        echo 'Iniciando a pipeline'
+        git branch: 'main', url: 'https://github.com/dynhu/cypress-ebac-portifolio-web.git'        
       }
-    }   
+    }
+    stage('instalar dependências') {
+      steps {
+        sh 'npm install'
+      }
+    }
+    stage('executar testes') {
+      steps {
+        sh 'npx cypress run'
+      }
+    }  
   }
 }
