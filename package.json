@@ -252,6 +252,7 @@
     "yocto-queue": "^0.1.0"
   },
   "devDependencies": {
+    "@faker-js/faker": "^8.4.1",
     "mocha": "^10.4.0"
   },
   "scripts": {
