@@ -1,4 +1,4 @@
-name: Cypress Tests
+name: manual-tests
 on:
   workflow_dispatch
 jobs:
