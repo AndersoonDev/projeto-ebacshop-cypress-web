@@ -9,7 +9,7 @@ pipeline {
     }
     stage('instalar dependências') {
       steps {
-        sh 'npm install'
+        sh 'npm i'
       }
     }
     stage('executar testes') {
