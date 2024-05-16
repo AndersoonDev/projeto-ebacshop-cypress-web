@@ -1,0 +1,21 @@
+name: manual-tests
+on:
+  workflow_dispatch
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        containers: [1, 2]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Cypress run
+        uses: cypress-io/github-action@v6
+        with:          
+          wait-on: 'http://lojaebac.ebaconline.art.br'
+          record: true
+          # parallel: true
+        env:
+          CYPRESS_RECORD_KEY: f977b581-3608-4311-9987-d794a18e940f
