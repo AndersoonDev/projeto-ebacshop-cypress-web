@@ -14,7 +14,7 @@ describe('Funcionalidade Endereços - Faturamento e Entrega',() => {
 
     it('Deve fazer cadastro de faturamento com sucesso',() => {
         enderecoPage.editarEnderecoFaturamento('Anderson', 'Silva', 'EBACSHOP', 'Brasil', 'Rua Alonso', ' Casa 1', 'São Paulo', 'São Paulo', '00000-000', '11-99999-0000', 'andersonsilva@teste.com')
-        cy.wait(5000)
+        
         cy.get('.woocommerce-message').should('contain', 'Endereço alterado com sucesso.')
     });
 

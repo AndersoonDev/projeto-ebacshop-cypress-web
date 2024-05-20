@@ -12,12 +12,6 @@ describe("Funcionalidade Pre Cadastro",() => {
     let senhaFaker = faker.internet.password()
     let emailFaker = faker.internet.email()
 
-    // it.only('Deve completar o Cadastro com sucesso',() => {
-    //     cy.get('#reg_email').type('andersonsilva@teste.com')
-    //     cy.get("#reg_password").type('teste@teste.com');
-    //     cy.get(":nth-child(4) > .button").click();
-    // })
-
     it("Deve completar o pré-cadastro com sucesso",() => {
 
         cy.get("#reg_email").type(faker.internet.email());
