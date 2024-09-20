@@ -1,16 +1,16 @@
 /// <reference types='cypress' />
 import {faker} from "@faker-js/faker";
 
+let nomeFaker = faker.person.firstName()
+let sobrenomeFaker = faker.person.lastName()
+let senhaFaker = faker.internet.password()
+let emailFaker = faker.internet.email()
 
 describe("Funcionalidade Pre Cadastro",() => {
     beforeEach(() => {
         cy.visit("/minha-conta");
     });
 
-    let nomeFaker = faker.person.firstName()
-    let sobrenomeFaker = faker.person.lastName()
-    let senhaFaker = faker.internet.password()
-    let emailFaker = faker.internet.email()
 
     it("Deve completar o pré-cadastro com sucesso",() => {
         cy.get("#reg_email").type(faker.internet.email());

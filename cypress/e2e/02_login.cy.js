@@ -9,15 +9,12 @@ describe('Funcionalidade Login',() => {
         cy.visit('minha-conta')
 });
 
-
     it('Deve fazer login com sucesso',() => {
         cy.get('#username').type('aluno_ebac@teste.com')
         cy.get('#password').type('teste@teste.com',{log: false})
         cy.get('.woocommerce-form > .button').click()
-
         cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain','Olá, aluno_ebac')
         cy.screenshot('Login com sucesso')
-
     })
 
     it('Deve fazer login com sucesso - Usando arquivos de dados',() => {
@@ -25,8 +22,7 @@ describe('Funcionalidade Login',() => {
         cy.get('#password').type(perfil.senha,{log: false})
         cy.get('.woocommerce-form > .button').click()
 
-        cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain','Olá, aluno_ebac')
-        
+        cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain','Olá, aluno_ebac')        
     })
 
     it('Deve fazer login com sucesso - Usando fixture',() => {
@@ -37,14 +33,12 @@ describe('Funcionalidade Login',() => {
 
             cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain','Olá, aluno_ebac')
         })
-
     });
 
     it('Deve exibir uma mensagem de erro ao inserir usuário inválido',() => {
         cy.get('#username').type('anderson@teste.com')
         cy.get('#password').type('teste@teste.com',{log: false})
         cy.get('.woocommerce-form > .button').click()
-
         cy.get('.woocommerce-error').should('contain','Endereço de e-mail desconhecido. Verifique novamente ou tente seu nome de usuário.')
     })
 
